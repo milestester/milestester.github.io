@@ -15,7 +15,9 @@ h2 {
 h3 { 
   color: rgb(41, 128, 185); 
 }
-ul { list-style: none; 
+ul { 
+list-style: none; 
+font-weight: normal !important;
 }
 
 /*Main*/
