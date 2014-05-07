@@ -1,0 +1,185 @@
+/*Body, HTML, Fonts*/
+body,html {
+  width: 100%;
+  height: 100%;
+  font-family: 'Lato', serif;
+}
+h1,h2{
+  font-size: 75px;
+  font-weight: 100;
+  margin: 0;
+}
+h2 { 
+  font-size: 30px; 
+}
+h3 { 
+  color: rgb(41, 128, 185); 
+}
+ul { list-style: none; 
+}
+
+/*Main*/
+header{
+  background-image: url('vancouver.jpg');
+  background-size: cover;
+}
+header h2{ 
+  font-size: 25px; 
+}
+header, #education{
+  background-color: #222;
+  color: white;
+  display: table;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+section{ 
+  width: 100%; 
+}
+header ul, #education ul{
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+.circular {
+  margin-top: -100px;
+  display: inline-block;
+  float: center;
+  width: 150px;
+  height: 150px;
+  border-radius: 150px;
+  border: 1px solid white;
+  -webkit-border-radius: 150px;
+  -moz-border-radius: 150px;
+  background-image: url('profilepic.jpg');
+  background-size: cover;
+}
+#projects{
+  display: inline-block;
+	background-color: rgb(189, 195, 199);
+	color: black;
+  text-align: center;
+  padding: 40px 0 50px 0;
+}
+#projects ul{
+  float: left;
+  text-align: left;
+  line-height: 2;
+  max-width: 575px;
+}
+#android{
+  padding-bottom: 60px;
+}
+#website{
+  padding-bottom: 30px;
+}
+#website ul{
+  padding-right: 220px;
+  float: right;
+}
+#website img{
+  padding-left: 20px;
+}
+#projects h2{
+  padding: 20px 0 30px 0;
+}
+#projects img{
+  max-width:100% !important;
+  height:auto;
+}
+#education{
+	background-color: white;
+  color: rgb(41, 128, 185);
+	padding-bottom: 100px;
+}
+#education ul{
+  line-height: 2;
+  font-size: 20px;
+}
+/*Navigation*/
+.down{
+  position: absolute;
+  z-index: 99;
+  opacity: 1;
+  left: 50%;
+  bottom: 45px;
+  margin-left: -36px;
+}
+.down :hover{
+  opacity: 0.5;
+  padding-bottom: 5px;
+}
+nav{
+	background-color: rgb(240,240,240);
+  position:fixed;
+  bottom:0;
+  width:100%;
+  height: 40px;
+}
+nav ul{
+	margin: 10px 0 0 10px;
+	padding: 0;
+}
+nav ul li{
+	display: inline;
+}
+nav ul li a{
+	color: black;
+  margin: 0 10px 0 10px;
+	text-decoration: none;
+}
+nav ul li a:hover{
+	color: rgb(41, 128, 185);
+  text-decoration: underline;
+}
+
+@media (min-width : 480px) and (max-width : 1024px){ 
+
+}
+
+@media  (min-width: 0px) and (max-width: 480px){
+ 	h2{
+ 		font-size: 20px;
+ 	}
+	header h1{
+		font-size: 3.5em;
+	}
+	header h2{
+		font-size: 1.5em;
+	}
+  section h2{
+    font-size: 25px;
+  }
+	#projects ul{
+    padding: 0px 0px 0px 30px;
+		font-size: 15px;
+	}
+  #projects img{
+    padding: 0;
+    margin: 0;
+  }
+  #projects h2{
+    padding-bottom: 10px;
+  }
+  #android{
+    padding-bottom: 20px;
+  }
+  #website{
+    padding-bottom: 20px;
+  }
+  #website li{
+    padding-right: 60px;
+  }
+  #projects li{
+    max-width: 350px;
+  }
+	nav{
+		font-size: 15px;
+		padding-left: 13px;
+		padding-top: 5px;
+	}
+}
