@@ -88,17 +88,21 @@ nav ul {
   padding: 0;
 }
 
-nav ul li {
+nav li {
   display: inline;
+  border-right: 1px solid black;
+}
+nav li:last-child{
+  border-right: none;
 }
 
-nav ul li a {
+nav li a {
   color: black;
   margin: 0 10px 0 10px;
   text-decoration: none;
 }
 
-nav ul li a:hover {
+nav li a:hover {
   color: rgb(41, 128, 185);
   text-decoration: underline;
 }
@@ -205,6 +209,12 @@ nav ul{
   width: 50%;
   text-align: left;
 }
+
+.down {
+  position: absolute;
+  bottom: 45px;
+  margin-left: -36px;
+}
 }
 
 #projects, #education {
@@ -230,21 +240,21 @@ nav ul{
 
 #education .item {
   text-align: center;
-  padding-bottom: 2em;
+  padding-bottom: 1em;
+}
+
+.logo{
+  margin-top: 1.5em;
 }
 
 .down {
-  position: absolute;
   z-index: 99;
   opacity: 1;
   left: 50%;
-  bottom: 45px;
-  margin-left: -36px;
 }
 
 .down:hover {
   opacity: 0.5;
-  padding-bottom: 5px;
 }
 
 /*Footer*/
