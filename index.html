@@ -6,77 +6,101 @@
         <meta name="description" content="Miles Tester Computer Science Major Portfolio">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
-        <link href='http://fonts.googleapis.com/css?family=Lato:100,700,100italic' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Lato:100,300,700,100italic' rel='stylesheet' type='text/css'>
    
         <script src="js/vendor/jquery-1.10.2.min.js"></script>
         <script src="js/main.js"></script> 
 
     </head>
     <body>
-        <header>
-            <ul>
-                <li class ="circular"></li>
-                <li> <h1> Miles Tester </h1> </li>
-                <li> <h2> Computer Science student at the University of British Columbia </h2> </li>
-                <li> <a href="#" class="back-to-tp down"><img src="img/down.png" width="75" height="35" alt="Down"> </a> </li>
-            </ul>
-        </header>
-
-        <section id="projects">
-        
-            <img src="img/database.png" width="60" alt="projects">
-            <h2>Technical Projects</h2>
-
-            <div id="android">
-                <ul>
-                    <li> <h3> NextBus Android App </h3> </li>
-                    <li> 1. Extended and completed implementation of transit Android app using Eclipse IDE.</li>
-                    <li> 2. Parsed JSON data files from Vancouver Translink API to populate map. </li>
-                    <li> 3. <em> Bonus </em>: Added current user location through both cell network and GPS. </li>
-                    <li> 4. <em> Self Directed Bonus: </em> Enhanced app functionality by ensuring user selected bus is still highlighted when the map is refreshed.</li>
-                </ul>
-                <img src="img/nexus_all.png" width="600">
-            </div>
-
-            <div id="website">
-                <ul>
-                    <li> <h3> This Website! </h3> </li>
-                    <li> 1. First website created using self-taught HTML and CSS. </li>
-                    <li> 2. Simple, clean and modern UI with responsive design. </li>
-                </ul>
-                <img src="img/macbook_all.png" width="600">
-            </div>
-
-            <div>
-                <ul>
-                    <li> <h3> Project Euler, LeetCode and CodingBat</h3> </li>
-                    <li> Solving various mathematical and computing progamming problems using Java. </li>
-                </ul>
-            </div>
-        </section>
-
-        <section id="education">
-            <ul>
-                <li> <img src="img/book.png" width="60" alt="education"> <h2>Education</h2> </li>
-                <li> <strong> UBC BCS Integrated Computer Science</strong>*  - <small> Expected graduation December 2015 </small> </li>
-                <li><strong> UBC Bachelor of Science in Mathematics, 2012 </strong></li>
-                <li><strong> UK A-Levels, Sutton Grammar School, 2008 </strong></li>
-                <li><small> <em> Currently In Progress* </em> </small></li>
-            </ul>
-        </section>
-
         <nav>
             <ul>
-                <li> | </li>
                 <li> <a href="#" class="back-to-top">Back to Top </a> </li>
                 <li> | </li>
                 <li> <a href="#" class="back-to-tp">Technical Projects</a> </li>
                 <li> | </li>
                 <li> <a href="#" class="back-to-e">Education</a> </li>
-                <li> | </li>
             </ul>
         </nav>
+
+        <header>
+            <div class="header-info">
+                <div class="circular"></div>
+                <h1> Miles Tester </h1>
+                <h2> Computer Science student at the University of British Columbia </h2>
+                <a href="#" class="back-to-tp down"><img src="img/down.png" width="75" height="35" alt="Down Arrow"> </a> 
+            </div>
+        </header>
+
+        <section id="projects">
+            <img src="img/database.png" width="60" alt="projects"/>
+            <h2>Technical Projects</h2>
+
+            <div class="row project-row">
+                <div class="item col">
+                    <h3>NextBus Android App</h3>
+                    <ol>
+                        <li>Extended and completed implementation of “NextBus” Android app using JUnit test-driven development to create a fully usable Vancouver local transit app solution.</li>
+                        <li>Parsed JSON data files from Vancouver Translink API to populate bus map.</li>
+                        <li><em>Bonus:</em> Extended usability of app through adding real time current user location using GPS or cell network.</li>
+                        <li><em>Self Directed Bonus:</em> Enhanced app functionality by ensuring user selected bus is still highlighted when the map is refreshed.</li>
+                    </ol>
+                </div>
+
+                <div class="item col">
+                    <img src="img/nexus_all.png">
+                </div>
+            </div>
+
+            <div class="row project-row">
+                <div class="item col">
+                    <img src="img/macbook_all.png"/>
+                </div>
+
+                <div class="item col">
+                    <h3>This Website!</h3>
+                    <ol>
+                        <li>Created first website from self-taught HTML and CSS.</li>
+                        <li>Developed a clean and modern UI.</li>
+                        <li>Responsive design ensures viewing experience is maintained on all devices.</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="row project-row">
+                <div class="item col">
+                    <h3>Project Euler, LeetCode and CodingBat</h3>
+                    <p> Solving various mathematical and computing progamming problems using Java.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="education">
+            <img src="img/book.png" width="60" alt="education">
+            <h2>Education</h2>
+
+            <div class="row">
+                <div class="item col">
+                    <h3>UBC BCS Integrated Computer Science</h3>
+                    <p>Expected graduation December 2015 </p> 
+                    <p>Previous UBC Bachelor of Science degree in Mathematics, 2012</p>
+                    <img src="img/ubcLogo.png" width="100" height="150" alt="UBC Logo"/>
+                </div>
+
+                <div class="item col">
+                    <h3>UK A-Levels, Sutton Grammar School</h3>
+                    <p>Achieved Grade A in All Subjects</p>
+                    <p>Subjects in: Math, Physics & Computing</p>
+                    <img src="img/SGLogo.png" width="138" height="150" alt="Sutton Grammar Logo"/>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="row">
+                <p class="col"><a href="https://github.com/milestester">GitHub</a> - <a href="http://ca.linkedin.com/pub/miles-tester/51/773/341">LinkedIn</a></p>
+            </div>
+        </footer>
     </body>
 </html>

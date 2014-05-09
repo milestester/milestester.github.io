@@ -1,45 +1,124 @@
-/*Body, HTML, Fonts*/
-body,html {
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+body, html {
   width: 100%;
   height: 100%;
-  font-family: 'Lato', serif;
 }
-h1,h2{
-  font-size: 75px;
-  font-weight: 100;
+
+body {
+  font: 100% 'Lato', Helvetica, Arial, sans-serif;
   margin: 0;
+  padding: 0;
+  line-height: 1;
+  color: #000;
 }
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*Reset*/
+
+div, h1, h2, h3, h4, h5, h6, p, ul, ol, li {
+  margin: 0;
+  padding: 0;
+}
+
+article, aside, figure, footer, header, nav, section {
+  display: block;
+}
+
+/*Type*/
+
+h1 {
+  font-size: 3.5em;
+  font-weight: 300;
+}
+
 h2 { 
-  font-size: 30px; 
+  font-size: 1.25em; 
+  font-weight: 100;
+  margin-bottom: 1.5em;
 }
+
 h3 { 
-  color: rgb(41, 128, 185); 
+  font-size: 1.5625em;
+  font-weight: normal;
+  color: rgb(41, 128, 185);
+  margin-bottom: 1em;
 }
+
+p { 
+  font-size: 1em;
+  margin-bottom: 1em;
+}
+
+/*Lists*/
+
 ul { 
-list-style: none; 
-font-weight: 100 !important;
+  list-style: none; 
+}
+
+ol {
+  line-height: 1.5;
+  list-style-position: inside;
+  text-indent: -1em;
+  margin-left: 1em;
+}
+
+/*Navigation*/
+
+nav {
+  background-color: rgba(240, 240, 240, 0.8);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 3.125em;
+  font-size: 0.875em;
+  text-align: center;
+}
+
+nav ul {
+  margin: 15px 0 0 10px;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  color: black;
+  margin: 0 10px 0 10px;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: rgb(41, 128, 185);
+  text-decoration: underline;
 }
 
 /*Main*/
-header{
-  background-image: url('vancouver.jpg');
+
+header {
+  background-image: url('../img/vancouver.jpg');
   background-size: cover;
+  text-align: center;
 }
-header h2{ 
-  font-size: 25px; 
-}
-header, #education{
-  background-color: #222;
+
+header {
   color: white;
   display: table;
   height: 100%;
   width: 100%;
-  position: relative;
 }
-section{ 
-  width: 100%; 
-}
-header ul, #education ul{
+
+.header-info {
   display: table-cell;
   vertical-align: middle;
   text-align: center;
@@ -47,6 +126,7 @@ header ul, #education ul{
   padding: 0;
   line-height: 1.5;
 }
+
 .circular {
   margin-top: -100px;
   display: inline-block;
@@ -57,53 +137,98 @@ header ul, #education ul{
   border: 1px solid white;
   -webkit-border-radius: 150px;
   -moz-border-radius: 150px;
-  background-image: url('profilepic.jpg');
+  background-image: url('../img/profilepic.jpg');
   background-size: cover;
 }
-#projects{
-  display: inline-block;
-	background-color: rgb(189, 195, 199);
-	color: black;
-  text-align: center;
-  padding: 40px 0 50px 0;
+
+.row {
+  max-width: 75em;
+  margin: 0 auto;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 5em;
+  padding-bottom: 5em;
 }
-#projects ul{
+
+.row.project-row {
+  border-bottom: 1px solid #E9E9E9;
+}
+
+.row.project-row:last-child {
+  border-bottom: none;
+}
+
+.col {
   float: left;
+  width: 100%;
+  padding-left: 0.9375em;
+  padding-right: 0.9375em;
+}
+
+.item {
+  margin-bottom: 1.25em;
+  text-align: center;  
+}
+
+@media screen and (min-width: 48em) {
+
+h1 {
+  font-size: 4.6875em;
+}
+
+h2 { 
+  font-size: 1.875em;
+} 
+
+nav ul{
   text-align: left;
-  line-height: 2;
-  max-width: 575px;
 }
-#android{
-  padding-bottom: 60px;
+
+#education .item {
+  padding-bottom: 0;
 }
-#website{
-  padding-bottom: 30px;
+
+.row {
+  padding: 2.5em;
 }
-#website ul{
-  padding-right: 220px;
-  float: right;
+
+.row.project-row {
+  border-bottom: none;
 }
-#website img{
-  padding-left: 20px;
+
+.item {
+  width: 50%;
+  text-align: left;
 }
-#projects h2{
-  padding: 20px 0 30px 0;
 }
-#projects img{
-  max-width:100% !important;
-  height:auto;
+
+#projects, #education {
+  text-align: center;
+  padding-top: 5em;
+  overflow: hidden;
 }
-#education{
+
+#projects {
+  background-color: rgb(189, 195, 199);
+}
+
+#projects h2, #education h2 {
+  margin: 0.875em 0;
+  font-size: 2.1875em;
+  font-weight: 300;
+}
+
+#education {
 	background-color: white;
-  color: rgb(41, 128, 185);
-	padding-bottom: 100px;
+  text-align: center;
 }
-#education ul{
-  line-height: 2;
-  font-size: 20px;
+
+#education .item {
+  text-align: center;
+  padding-bottom: 2em;
 }
-/*Navigation*/
-.down{
+
+.down {
   position: absolute;
   z-index: 99;
   opacity: 1;
@@ -111,77 +236,33 @@ header ul, #education ul{
   bottom: 45px;
   margin-left: -36px;
 }
-.down :hover{
+
+.down:hover {
   opacity: 0.5;
   padding-bottom: 5px;
 }
-nav{
-	background-color: rgb(240,240,240);
-  position:fixed;
-  bottom:0;
-  width:100%;
-  height: 40px;
+
+/*Footer*/
+
+footer {
+  background-color: #666;
 }
-nav ul{
-	margin: 10px 0 0 10px;
-	padding: 0;
+
+footer .row {
+  padding-top: 2.5em;
+  padding-bottom: 2.5em;
 }
-nav ul li{
-	display: inline;
+
+footer p {
+  margin-bottom: 0;
+  color: #FFF;
 }
-nav ul li a{
-	color: black;
-  margin: 0 10px 0 10px;
-	text-decoration: none;
+
+footer a, footer a:visited{
+  text-decoration: none;
+  color: white;
 }
-nav ul li a:hover{
-	color: rgb(41, 128, 185);
+
+footer a:hover{
   text-decoration: underline;
-}
-
-@media (min-width : 480px) and (max-width : 1024px){ 
-
-}
-
-@media  (min-width: 0px) and (max-width: 480px){
- 	h2{
- 		font-size: 20px;
- 	}
-	header h1{
-		font-size: 3.5em;
-	}
-	header h2{
-		font-size: 1.5em;
-	}
-  section h2{
-    font-size: 25px;
-  }
-	#projects ul{
-    padding: 0px 0px 0px 30px;
-		font-size: 15px;
-	}
-  #projects img{
-    padding: 0;
-    margin: 0;
-  }
-  #projects h2{
-    padding-bottom: 10px;
-  }
-  #android{
-    padding-bottom: 20px;
-  }
-  #website{
-    padding-bottom: 20px;
-  }
-  #website li{
-    padding-right: 60px;
-  }
-  #projects li{
-    max-width: 350px;
-  }
-	nav{
-		font-size: 15px;
-		padding-left: 13px;
-		padding-top: 5px;
-	}
 }
