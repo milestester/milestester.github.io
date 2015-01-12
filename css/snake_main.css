@@ -41,7 +41,7 @@ div{
 	padding: 10px;
 	border-radius: 5px;
 	cursor: pointer;
-	text-decoration: none;
+	font-size: 2em;
 }
 
 @media screen and (max-width: 48em) {
@@ -50,9 +50,10 @@ div{
 		font-size: 1.5em;
 	}
 
-	p {
+	p, #replay {
 		font-size: 1em;
 	}
+
 }
 
 @media screen and (max-width: 24em) {
