@@ -327,4 +327,9 @@ SNAKE.Draw = {
 
 window.addEventListener('load', function(){SNAKE.init();}, false);
 window.addEventListener('resize', function() {SNAKE.resize();}, false);
+document.getElementById("replay").addEventListener('click', 
+	function(){
+		location.reload();
+	}
+);
 
