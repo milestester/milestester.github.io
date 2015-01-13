@@ -140,8 +140,6 @@ header {
 .header-info {
   background-image: url('../img/vancouver.jpg');
   background-size: cover;
-  -moz-background-size: cover;
-  background-attachment: fixed;
   display: table-cell;
   vertical-align: middle;
   text-align: center;
