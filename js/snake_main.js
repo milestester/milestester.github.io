@@ -204,21 +204,7 @@ var SNAKE = {
 	},
 	
 	increaseBody: function(){
-	var incPos = this.snakePos[this.snakePos.length - 1].slice();
-		switch(this.direction){
-		case DIR.LEFT:
-			incPos[0] += this.SNAKE_DIM;
-			break
-		case DIR.RIGHT:
-			incPos[0] -= this.SNAKE_DIM;
-			break
-		case DIR.UP:
-			incPos[1] += this.SNAKE_DIM;
-			break
-		case DIR.DOWN:
-			incPos[1] -= this.SNAKE_DIM;
-			break	
-		}
+		var incPos = this.snakePos[this.snakePos.length - 1].slice();
 		this.snakePos.push(incPos);
 	},
 
