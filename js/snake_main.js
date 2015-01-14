@@ -79,8 +79,7 @@ var SNAKE = {
 	},
 	                                                        
 
- 	handleTouchStart: function(evt) {   
- 		evt.preventDefault();                                      
+ 	handleTouchStart: function(evt) {                                        
 	    xDown = evt.touches[0].clientX;                                      
 	    yDown = evt.touches[0].clientY;                                      
 	},                                            
