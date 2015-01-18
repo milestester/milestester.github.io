@@ -138,7 +138,12 @@ header {
 }
 
 .header-info {
-  background-image: url('../img/vancouver.jpg');
+  background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.15), 
+      rgba(0, 0, 0, 0.15)
+    ),
+    url('../img/vancouver.jpg');
   background-size: cover;
   display: table-cell;
   vertical-align: middle;
