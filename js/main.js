@@ -26,6 +26,7 @@ $(document).ready(function(){
   });
 
   if (window.innerWidth > 550) {
+    $(".background-img").css({"background-attachment": "fixed"});
     setTimeout(function(){
     $('.header-content-top').css({top: 25, opacity: 0, visibility: "visible"}).animate({top: 0, opacity: 1}, 'linear');
     }, 500);
