@@ -1,32 +1,20 @@
+var headerHeight;
+
 $(document).ready(function(){
-  var duration = 500;
-
-  $('.experience-link').click(function(event) {
-      event.preventDefault();
-      $('html, body').animate({ scrollTop: $('#experience').offset().top}, duration);
-      return false;
-  });
-
-  $('.projects-link').click(function(event) {
-      event.preventDefault();
-      $('html, body').animate({ scrollTop: $('#projects').offset().top}, duration);
-      return false;
-  });
-
-  $('.education-link').click(function(event) {
-      event.preventDefault();
-      $('html, body').animate({ scrollTop: $('#education').offset().top}, duration);
-      return false;
-  });
-
-  $('.about-me-link').click(function(event) {
-      event.preventDefault();
-      $('html, body').animate({ scrollTop: $('#about-me').offset().top}, duration);
-      return false;
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 500);
+        return false;
+      }
+    }
   });
 
   if (window.innerWidth > 550) {
-    $(".background-img").css({"background-attachment": "fixed"});
     setTimeout(function(){
     $('.header-content-top').css({top: 25, opacity: 0, visibility: "visible"}).animate({top: 0, opacity: 1}, 'linear');
     }, 500);
@@ -59,4 +47,37 @@ $(document).ready(function(){
     $('#about-me-typed').css({display: "none"});
   }
 
+  headerHeight = $(".header-content").outerHeight();
 });
+
+$(window).resize(function () {
+  headerHeight = $(".header-content").outerHeight();
+  if (window.innerWidth < 768) {
+    $(".header-content").css({opacity: "1", "padding-top": "0"});
+    $(".background-img").css({ backgroundPosition: 0 });
+  }
+});
+
+$(window).scroll(function () {
+  if (window.innerWidth > 768) {
+    parallaxText($(".header-content"), 0, headerHeight);
+    $bgobj = $('div[data-type="background"]');
+    var yPos = -($(window).scrollTop() / $bgobj.data('speed'));
+    var coords = '50% '+ yPos + 'px';
+    $bgobj.css({ backgroundPosition: coords });
+  }
+});
+
+function parallaxText(elementToFade, fadeStartHeight, fadeLength) {
+  var opacity;
+  var scrollTop  = $(document).scrollTop();
+  if (scrollTop < fadeStartHeight) {
+    opacity = 1;
+  } else if (scrollTop > fadeStartHeight + fadeLength) {
+    opacity = 1;
+  } else {
+    opacity = (fadeLength - fadeStartHeight - scrollTop) / (fadeLength - fadeStartHeight);
+  }
+  elementToFade.css("opacity", opacity);
+  elementToFade.css("padding-top", 600 - opacity * 600);
+}

@@ -78,6 +78,7 @@ body {
   ),
   url('../images/coding-2.jpg');
   background-size: cover;
+  overflow: hidden;
 }
 
 /* --------- Header --------- */
@@ -144,6 +145,19 @@ header.index-head {
   font-weight: bold;
 }
 
+.down-arrow {
+  position: relative;
+  top: 40px;
+  -webkit-transition: all .1s linear;
+  -o-transition: all .1s linear;
+  -moz-transition: all .1s linear;
+  transition: all .1s linear;
+}
+
+.down-arrow:hover {
+  top: 45px;
+}
+
 hr {
   border-width: 0;
   border-top: 1px solid #e1e1e1;
@@ -208,13 +222,14 @@ section h1 {
 }
 
 section {
-  margin-top: 5em !important;
-  margin-bottom: 5em !important;
+  padding-top: 5em !important;
+  padding-bottom: 5em !important;
 }
 
 section ul {
   list-style-position: inside;
   color: #1db896;
+  font-size: 1em;
 }
 
 section ul span {
@@ -229,8 +244,12 @@ section ul span {
   margin-bottom: 2em;
 }
 
-.hidden-phone {
-  display: none;
+p {
+  font-size: 1.2em;
+}
+
+#about-me, #projects {
+  background-color: #fff;
 }
 
 /* --- Projects Overlay --- */
@@ -373,6 +392,10 @@ footer {
 /* ---- Media Queries ----- */
 
 @media (min-width: 550px) {
+  .background-img {
+    background-attachment: fixed;
+  }
+
   .header-content h1 {
     font-size: 4em;
   }
@@ -381,16 +404,20 @@ footer {
     font-size: 2em;
   }
 
-  .hidden-phone {
-    display: inline-block !important;
-  }
-
   .img-overlay h2 {
     font-size: 1.3em;
   }
 
   .img-overlay p {
     font-size: 1em;
+  }
+
+  p {
+    font-size: 1.5em;
+  }
+
+  section ul {
+    font-size: 1.2em;
   }
 }
 
@@ -412,10 +439,6 @@ footer {
   .icon-social {
     width: 41px;
     height: 41px;
-  }
-
-  section {
-    text-align: center;
   }
 }
 

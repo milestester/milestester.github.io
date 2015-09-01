@@ -17,7 +17,7 @@
     <script src="js/main.js"></script>
   </head>
   <body>
-    <div class="background-img">
+    <div class="background-img" data-type="background" data-speed="9">
       <header class="container index-head">
         <div class="header-content">
           <div class="header-content-top">
@@ -28,119 +28,133 @@
           <hr>
           <nav class="index-nav row">
             <div class="quarter col">
-              <img class="index-icon" width="13" height="13" alt="" src="images/about.png"> <a href="" class="about-me-link">About Me</a>
+              <img class="index-icon" width="13" height="13" alt="" src="images/about.png"> <a href="#about-me">About Me</a>
             </div>
             <div class="quarter col">
-              <img class="index-icon" width="13" height="13" alt="" src="images/list.png"> <a href="" class="experience-link">Experience </a>
+              <img class="index-icon" width="13" height="13" alt="" src="images/list.png"> <a href="#experience">Experience </a>
             </div>
             <div class="quarter col">
-              <img class="index-icon" width="13" height="13" alt="" src="images/laptop.png"> <a href="" class="projects-link"> Projects </a>
+              <img class="index-icon" width="13" height="13" alt="" src="images/laptop.png"> <a href="#projects"> Projects </a>
             </div>
             <div class="quarter col">
-              <img class="index-icon" width="13" height="13" alt="" src="images/books.png"> <a href="" class="education-link"> Education </a>
+              <img class="index-icon" width="13" height="13" alt="" src="images/books.png"> <a href="#education"> Education </a>
             </div>
           </nav>
+          <a href="#about-me"><img class="down-arrow" alt="" width="40" height="40" src="images/down-arrow.png"></a>
         </div>
       </header>
     </div>
 
-    <section class="container" id="about-me">
-      <h1><span class="yellow-underline">About Me</span></h1>
-      <div class="row">
-        <div class="whole col item">
-          <h2 id="about-me-typed"> I've had experience with <span id="typed"></span></h2>
-          <h2 id="about-me-alt" style="display: none;"> I've had experience with Java, C, JavaScript, Python, HTML and CSS, JQuery & Dojo. </h2>
+    <section id="about-me">
+      <div class="container">
+        <div class="row">
+          <div class="whole col">
+            <h1><span class="yellow-underline">About Me</span></h1>
+            <p> Final year second degree Computer Science student at <a href="https://www.cs.ubc.ca/students/undergrad/programs/second-degree/index.html" target="_blank">UBC</a>. </p>
+            <p> Strong academic background with prior degree in Mathematics. </p>
+            <p> Industry experience with both large multinational companies and small start up environments. </p>
+            <p id="about-me-typed"> I've had experience with <span id="typed"></span></p>
+            <p id="about-me-alt" style="display: none;"> I've had experience with Java, C, JavaScript, Python, HTML and CSS, JQuery & Dojo. </p>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="container" id="experience">
-      <h1><span class="yellow-underline">Experience</span></h1>
       <div class="row">
-        <div class="half col item">
-          <a href="http://www.tradablebits.com" target="_blank"><img class="hidden-phone" src="images/tbits-logo.png" width="75" alt=""></a>
-          <h2>Tradable Bits</h2>
-          <h3>Software Developer Intern</h3>
-          <h4>May 2015 - Current</h4>
-          <p><b>Technology Used:</b> Python, JavaScript, JQuery, PostgreSQL, HTML, CSS</p>
+        <div class="whole col">
+          <h1><span class="yellow-underline">Experience</span></h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="whole col item">
+          <a href="http://www.tradablebits.com" target="_blank"><img src="images/tbits-logo.png" width="100" alt=""></a>
+          <p>Software Developer Intern</p>
+          <p>May - Aug 2015</p>
+          <p><strong>Technology Used:</strong> Python, JavaScript, JQuery, PostgreSQL, HTML, CSS</p>
           <ul>
             <li><span>Full stack development of Tradable Bits web platform</span></li>
             <li><span>Gained experience in a wide variety of tasks both front and back end</span></li>
             <li><span>On the front-end I upgraded client facing web pages and also re-coded the interface of pages within the platform</span></li>
             <li><span>Integrated Vimeo API into the popular stream product, allowing clients to aggregate Vimeo videos into their streams</span></li>
-            <li><span>Recently I upgraded the system to allow multiple user logins, which required analysis and reworking of the current database structure</span></li>
+            <li><span>Upgraded the platform to allow multiple user logins, which required analysis and reworking of the current database structure</span></li>
           </ul>
         </div>
-        <div class="half col item">
-          <img style="padding-bottom: 15px;" class="hidden-phone" src="images/ibm-logo.png" width="100" alt="">
-          <h2>IBM</h2>
-          <h3>Software Developer Intern</h3>
-          <h4>Sep - Dec 2014</h4>
-          <p><b>Technology Used:</b> JavaScript, Dojo, HTML, CSS</p>
+        <div class="whole col">
+          <img src="images/ibm-logo.png" width="100" alt="">
+          <p>Software Developer Intern</p>
+          <p>Sep - Dec 2014</p>
+          <p><strong>Technology Used:</strong> JavaScript, Dojo, HTML, CSS</p>
           <ul>
             <li><span>Assisted with the development of IBM's Client Collaboration Hub (CCH) and Forms Experience Builder (FEB)</span></li>
-            <li><span>I quickly became familiar with JavaScript and Dojo and integrated new features into CCH within a few weeks of starting</span></li>
+            <li><span>Quickly became familiar with JavaScript and Dojo and integrated new features into CCH within a few weeks of starting</span></li>
             <li><span>Developed new features for FEB, reaching a large user base</span></li>
           </ul>
         </div>
       </div>
     </section>
 
-    <section class="container" id="projects">
-      <h1><span class="yellow-underline">Projects</span></h1>
-      <div class="row">
-        <div class="half col item">
-          <div class="img-overlay">
-            <img src="images/snake-screenshot.png"/>
-            <div class="img-overlay-bg snake-overlay"></div>
-            <div class="content">
-              <a href="snake.html" target="_blank"><h2>JavaScript Snake Game</h2></a>
-              <p><b>JavaScript, HTML & CSS</b></p>
-              <p>Developed an arcade style snake game in pure Javascript, using the HTML5 canvas element.
-                 Implemented adaptive and responsive design to ensure game works on all devices, including touch screens.
-                 <br>
-              </p>
-            </div>
+    <section id="projects">
+      <div class="container">
+        <div class="row">
+          <div class="whole col">
+            <h1><span class="yellow-underline">Projects</span></h1>
           </div>
         </div>
-        <div class="half col item">
-          <div class="img-overlay">
-            <img src="images/this-site-screenshot.png"/>
-            <div class="img-overlay-bg this-website-overlay "></div>
-            <div class="content">
-              <h2>This Website!</h2>
-              <p><b>JQuery, HTML5 & CSS3</b></p>
-              <p>
-                Recently redesigned without the use of a framework using my own responsive grid.
-                I was able to further develop my HTML5 and CSS3 skills.
-              </p>
+        <div class="row">
+          <div class="half col item">
+            <div class="img-overlay">
+              <img src="images/snake-screenshot.png"/>
+              <div class="img-overlay-bg snake-overlay"></div>
+              <div class="content">
+                <a href="snake.html" target="_blank"><h2>JavaScript Snake Game</h2></a>
+                <p><strong>JavaScript, HTML & CSS</strong></p>
+                <p>Developed an arcade style snake game in pure Javascript, using the HTML5 canvas element.
+                   Implemented adaptive and responsive design to ensure game works on all devices, including touch screens.
+                   <br>
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="half col item">
-          <div class="img-overlay">
-            <img src="images/arty-van-screenshot.png"/>
-            <div class="img-overlay-bg arty-van-overlay"></div>
-            <div class="content">
-              <a href="http://arty-van-ubc.appspot.com" target="_blank"><h2>ArtyVan Web App</h2></a>
-              <p><b>Java, GWT, HTML & CSS</b></p>
-              <p>Worked in a team of four to build a web app showcasing public art in Vancouver.
-                 Developed using the Agile software development process with the scrum framework.
-                 I gained experience using Google Maps API and with KML & JSON Parsing. <br>
-              </p>
+          <div class="half col item">
+            <div class="img-overlay">
+              <img src="images/this-site-screenshot.png"/>
+              <div class="img-overlay-bg this-website-overlay "></div>
+              <div class="content">
+                <h2>This Website!</h2>
+                <p><strong>JQuery, HTML5 & CSS3</strong></p>
+                <p>
+                  Recently redesigned without the use of a framework using my own responsive grid.
+                  I was able to further develop my HTML5 and CSS3 skills.
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="half col item">
-          <div class="img-overlay">
-            <img src="images/next-bus-screenshot.png"/>
-            <div class="img-overlay-bg nextbus-overlay"></div>
-            <div class="content">
-              <h2>NextBus Android App</h2>
-              <p><b>Java, JSON, Eclipse</b></p>
-              <p> Completed “NextBus” Android app using JUnit test-driven development.
-                  Included real time current user location using GPS or cell network. Enhanced app functionality by ensuring user selected bus is highlighted when the map is refreshed.
-              </p>
+          <div class="half col item">
+            <div class="img-overlay">
+              <img src="images/arty-van-screenshot.png"/>
+              <div class="img-overlay-bg arty-van-overlay"></div>
+              <div class="content">
+                <a href="http://arty-van-ubc.appspot.com" target="_blank"><h2>ArtyVan Web App</h2></a>
+                <p><strong>Java, GWT, HTML & CSS</strong></p>
+                <p>Worked in a team of four to build a web app showcasing public art in Vancouver.
+                   Developed using the Agile software development process with the scrum framework.
+                   I gained experience using Google Maps API and with KML & JSON Parsing. <br>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="half col item">
+            <div class="img-overlay">
+              <img src="images/next-bus-screenshot.png"/>
+              <div class="img-overlay-bg nextbus-overlay"></div>
+              <div class="content">
+                <h2>NextBus Android App</h2>
+                <p><strong>Java, JSON, Eclipse</strong></p>
+                <p> Completed “NextBus” Android app using JUnit test-driven development.
+                    Included real time current user location using GPS or cell network. Enhanced app functionality by ensuring user selected bus is highlighted when the map is refreshed.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -148,26 +162,26 @@
     </section>
 
     <section class="container" id="education">
-      <h1><span class="yellow-underline">Education</span></h1>
       <div class="row">
-        <div class="third col item">
-          <img class="hidden-phone" src="images/ubc-logo.png" width="80" alt="">
-          <h2> UBC </h2>
-          <h3> BCS Computer Science </h3>
-          <h4> Sept 2013 - Current </h4>
+        <div class="whole col">
+          <h1><span class="yellow-underline">Education</span></h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="half col item">
+          <img src="images/ubc-logo.png" width="80" alt="">
+          <p> <strong> UBC </strong> </p>
+          <p> BCS Computer Science </p>
+          <p> Sept 2013 - Current </p>
           <p> Intensive 20 month Computer Science degree. </p>
+          <p> BSc Mathematics </p>
+          <p> Sept 2008 - May 2012 </p>
         </div>
-        <div class="third col item">
-          <img class="hidden-phone" src="images/ubc-logo.png" width="80" alt="">
-          <h2> UBC </h2>
-          <h3> BSc Mathematics </h3>
-          <h4> Sept 2008 - May 2012 </h4>
-        </div>
-        <div class="third col item">
-          <img class="hidden-phone" src="images/sg-logo.png" width="112" alt="">
-          <h2> Sutton Grammar School </h2>
-          <h3> Maths, Physics & Computing A-Levels </h3>
-          <h4> Graduated May 2008 </h4>
+        <div class="half col item">
+          <img src="images/sg-logo.png" width="110" alt="">
+          <p> <strong> Sutton Grammar School </strong> </p>
+          <p> Maths, Physics & Computing A-Levels </p>
+          <p> Graduated May 2008 </p>
           <p> Achieved an "A" in all subjects.</p>
         </div>
       </div>
