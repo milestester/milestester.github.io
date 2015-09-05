@@ -440,6 +440,10 @@ footer {
     width: 41px;
     height: 41px;
   }
+
+  section {
+    text-align: center;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 990px) {
