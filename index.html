@@ -15,6 +15,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="js/typed.js" type="text/javascript"></script>
     <script src="js/main.js"></script>
+    <script src="js/modernizr.js"></script>
   </head>
   <body>
     <div class="background-img" data-type="background" data-speed="9">
@@ -27,17 +28,14 @@
           </div>
           <hr>
           <nav class="index-nav row">
-            <div class="quarter col">
+            <div class="third col">
               <img class="index-icon" width="13" height="13" alt="" src="images/about.png"> <a href="#about-me">About Me</a>
             </div>
-            <div class="quarter col">
-              <img class="index-icon" width="13" height="13" alt="" src="images/list.png"> <a href="#experience">Experience </a>
+            <div class="third col">
+              <img class="index-icon" width="13" height="13" alt="" src="images/list.png"> <a href="#timeline">Timeline </a>
             </div>
-            <div class="quarter col">
+            <div class="third col">
               <img class="index-icon" width="13" height="13" alt="" src="images/laptop.png"> <a href="#projects"> Projects </a>
-            </div>
-            <div class="quarter col">
-              <img class="index-icon" width="13" height="13" alt="" src="images/books.png"> <a href="#education"> Education </a>
             </div>
           </nav>
           <a href="#about-me"><img class="down-arrow" alt="" width="40" height="40" src="images/down-arrow.png"></a>
@@ -60,38 +58,84 @@
       </div>
     </section>
 
-    <section class="container" id="experience">
+    <section class="container" id="timeline">
       <div class="row">
         <div class="whole col">
-          <h1><span class="yellow-underline">Experience</span></h1>
+          <h1><span class="yellow-underline">Timeline</span></h1>
         </div>
       </div>
-      <div class="row">
-        <div class="whole col item">
-          <a href="http://www.tradablebits.com" target="_blank"><img src="images/tbits-logo.png" width="100" alt=""></a>
-          <p>Software Developer Intern</p>
-          <p>May - Aug 2015</p>
-          <p><strong>Technology Used:</strong> Python, JavaScript, JQuery, PostgreSQL, HTML, CSS</p>
-          <ul>
-            <li><span>Full stack development of Tradable Bits web platform</span></li>
-            <li><span>Gained experience in a wide variety of tasks both front and back end</span></li>
-            <li><span>On the front-end I upgraded client facing web pages and also re-coded the interface of pages within the platform</span></li>
-            <li><span>Integrated Vimeo API into the popular stream product, allowing clients to aggregate Vimeo videos into their streams</span></li>
-            <li><span>Upgraded the platform to allow multiple user logins, which required analysis and reworking of the current database structure</span></li>
-          </ul>
+
+      <div class="timeline">
+        <div class="cd-timeline-block">
+          <div class="cd-timeline-img cd-tradable">
+          </div>
+          <div class="cd-timeline-content">
+            <h2>Tradable Bits</h2>
+            <h4>Software Engineer Co-Op</h4>
+            <ul>
+              <li>Engineered full-stack products for clients to manage their social media marketing and audience analytics</li>
+              <li>Improved CRM dashboard, providing client analysis and visualization of social media user demographics</li>
+              <li>Integrated Vimeo video endpoints, using a REST API, into the platform’s social media aggregator</li>
+              <li>Developed multi-user login by refactoring PostgreSQL database tables, enabling clients to delegate permissions to their social media team</li>
+            </ul>
+            <span class="cd-date">May 2015 - Aug 2015</span>
+          </div>
         </div>
-        <div class="whole col">
-          <img src="images/ibm-logo.png" width="100" alt="">
-          <p>Software Developer Intern</p>
-          <p>Sep - Dec 2014</p>
-          <p><strong>Technology Used:</strong> JavaScript, Dojo, HTML, CSS</p>
-          <ul>
-            <li><span>Assisted with the development of IBM's Client Collaboration Hub (CCH) and Forms Experience Builder (FEB)</span></li>
-            <li><span>Quickly became familiar with JavaScript and Dojo and integrated new features into CCH within a few weeks of starting</span></li>
-            <li><span>Developed new features for FEB, reaching a large user base</span></li>
-          </ul>
+
+        <div class="cd-timeline-block">
+          <div class="cd-timeline-img cd-ibm">
+          </div>
+          <div class="cd-timeline-content">
+            <h2>IBM</h2>
+            <h4>Software Developer Co-Op</h4>
+            <ul>
+              <li>Engineered a release support framework allowing developers to highlight new product features in IBM’s internal sales hub, reaching an employee user base of thousands</li>
+              <li>Enhanced web based form-builder software to enable non-technical users to create client and server-side input box validation</li>
+            </ul>
+            <span class="cd-date">Sep 2014 - Dec 2014</span>
+          </div>
         </div>
-      </div>
+
+        <div class="cd-timeline-block">
+          <div class="cd-timeline-img cd-bcs">
+          </div>
+          <div class="cd-timeline-content">
+            <h2>UBC</h2>
+            <h4>Computer Science Student</h4>
+            <ul>
+              <li>Intensive 20 month Computer Science degree</li>
+              <li>Completed two industry work terms</li>
+            </ul>
+            <span class="cd-date">Sep 2013 - Now</span>
+          </div>
+        </div>
+
+        <div class="cd-timeline-block">
+          <div class="cd-timeline-img cd-math">
+          </div>
+          <div class="cd-timeline-content">
+            <h2>UBC</h2>
+            <h4>BSc Mathematics</h4>
+            <ul>
+              <li>Maximum Value President’s Award Entrance Scholarship</li>
+              <li>Mathematical Demonstrations: Organized and led math workshops at local elementary and high schools</li>
+            </ul>
+            <span class="cd-date">Sep 2008 - Sep 2012</span>
+          </div>
+        </div>
+
+        <div class="cd-timeline-block">
+          <div class="cd-timeline-img cd-tradable">
+          </div>
+          <div class="cd-timeline-content">
+            <h2>Sutton Grammar School</h2>
+            <ul>
+              <li>Maths, Physics & Computing A-Levels</li>
+              <li>Achieved an "A" in all subjects</li>
+            </ul>
+            <span class="cd-date">Graduated 2008</span>
+          </div>
+        </div>
     </section>
 
     <section id="projects">
@@ -102,6 +146,20 @@
           </div>
         </div>
         <div class="row">
+          <div class="half col item">
+            <div class="img-overlay">
+              <img src="images/ionic-app-screenshot.png"/>
+              <div class="img-overlay-bg ionic-overlay"></div>
+              <div class="content">
+                <h2>Ionic Hybrid Android App</h2>
+                <p><strong>JavaScript, Java, Ionic, Angular, Android SDK, HTML, CSS</strong></p>
+                <p>Co-developed voice controlled recipe book app allowing hands-free use while cooking.
+                   Enhanced an open-source Java Cordova plugin for continuous voice recognition and keyword matching.
+                   <br>
+                </p>
+              </div>
+            </div>
+          </div>
           <div class="half col item">
             <div class="img-overlay">
               <img src="images/snake-screenshot.png"/>
@@ -157,32 +215,6 @@
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="container" id="education">
-      <div class="row">
-        <div class="whole col">
-          <h1><span class="yellow-underline">Education</span></h1>
-        </div>
-      </div>
-      <div class="row">
-        <div class="half col item">
-          <img src="images/ubc-logo.png" width="80" alt="">
-          <p> <strong> UBC </strong> </p>
-          <p> BCS Computer Science </p>
-          <p> Sept 2013 - Current </p>
-          <p> Intensive 20 month Computer Science degree. </p>
-          <p> BSc Mathematics </p>
-          <p> Sept 2008 - May 2012 </p>
-        </div>
-        <div class="half col item">
-          <img src="images/sg-logo.png" width="110" alt="">
-          <p> <strong> Sutton Grammar School </strong> </p>
-          <p> Maths, Physics & Computing A-Levels </p>
-          <p> Graduated May 2008 </p>
-          <p> Achieved an "A" in all subjects.</p>
         </div>
       </div>
     </section>
