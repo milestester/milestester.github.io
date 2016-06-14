@@ -26,7 +26,7 @@ $(document).ready(function(){
     }, 950);
 
     $("#typed").typed({
-      strings: ["Java.", "C.", "JavaScript.", "Python.", "HTML and CSS.", "JQuery.", "Dojo."],
+      strings: ["Java.", "JavaScript.", "Python.", "HTML and CSS.", "JQuery.", "Dojo."],
       typeSpeed: 60,
       backDelay: 700,
       backSpeed: 20,

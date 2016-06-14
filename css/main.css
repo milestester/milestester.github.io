@@ -254,24 +254,28 @@ p {
 
 /* --- Projects Overlay --- */
 
+.extension-overlay {
+  background-color: #88C983;
+}
+
 .ionic-overlay {
-  background: rgba(226,106,106,0.85);
+  background: rgb(226,106,106);
 }
 
 .snake-overlay {
-  background: rgba(235,186,25,0.85);
+  background: rgb(235,186,25);
 }
 
 .arty-van-overlay {
-  background-color: rgba(221,139,120,0.8);
+  background-color: rgb(221,139,120);
 }
 
 .nextbus-overlay {
-  background-color: rgba(144,199,204,0.9);
+  background-color: rgb(144,199,204);
 }
 
 .this-website-overlay {
-  background-color: rgba(115,146,184,0.8);
+  background-color: rgb(115,146,184);
 }
 
 .img-overlay {
